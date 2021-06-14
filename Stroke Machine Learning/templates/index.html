@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spam Detector</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+
+	<header>
+		<div class="container">
+		    <h2>Stroke Prediction</h2>
+	    </div>
+	</header>
+        <div class="container">
+            <img src="https://media.giphy.com/media/5xtDarmhcyiIgmzWTXW/giphy.gif"/>
+
+            <form action="/predict" method="POST" class="form">
+                <div class="fieldset">
+                    <label>Age</label>
+                    <input class="age" name="age">
+                </div>
+                <div class="fieldset">
+                    <label>Hypertension (Yes=1/No=0)</label>
+                    <input class="hyperTension" name="hyperTension">
+                </div>
+                <div class="fieldset">
+                    <label>Heart Disease (Yes=1/No=0)</label>
+                    <input class="heartdisease" name="heartdisease">
+                </div>
+                <div class="fieldset">
+                    <label>Average Glucose Level</label>
+                    <input class="glucose" name="glucose">
+                </div>
+                <div class="fieldset">
+                    <label>BMI</label>
+                    <input class="bmi" name="bmi">
+                </div>
+                <input type="submit" class="button" value="Prediction">
+            </form>
+        </div>
+    </body>
+</html>
